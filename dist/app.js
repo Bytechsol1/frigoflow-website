@@ -1,60 +1,33 @@
 const menuToggle = document.querySelector('.menu-toggle');
 
-// Responsive testimonial pages with native swipe and no automatic rotation.
+// Continuous testimonial strip; cloned cards are visual duplicates only.
 const testimonialTrack = document.querySelector('#testimonials-track');
 if (testimonialTrack) {
-  const cards = [...testimonialTrack.querySelectorAll('.testimonial-card')];
+  const belt = testimonialTrack.querySelector('.testimonial-belt');
+  const group = belt.querySelector('.testimonials-grid');
+  const duplicate = group.cloneNode(true);
+  duplicate.classList.add('testimonial-duplicates');
+  duplicate.setAttribute('aria-hidden', 'true');
+  duplicate.setAttribute('inert', '');
+  duplicate.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
+  belt.append(duplicate);
   const controls = document.querySelector('.testimonial-controls');
-  const previous = controls.querySelector('.testimonial-prev');
-  const next = controls.querySelector('.testimonial-next');
-  const dots = controls.querySelector('.testimonial-dots');
-  const position = controls.querySelector('.testimonial-position');
-  let perPage = 3, starts = [], current = 0, scheduled = false;
-  const offset = index => cards[index].offsetLeft - cards[0].offsetLeft;
-  function sync() {
-    const left = testimonialTrack.scrollLeft;
-    current = starts.reduce((best, start, page) => Math.abs(offset(start) - left) < Math.abs(offset(starts[best]) - left) ? page : best, 0);
-    previous.disabled = current === 0;
-    next.disabled = current === starts.length - 1;
-    [...dots.children].forEach((dot, index) => dot.setAttribute('aria-current', String(index === current)));
-    position.textContent = `${starts[current] + 1}\u2013${Math.min(starts[current] + perPage, cards.length)} / ${cards.length} testimonials`;
+  const pause = controls.querySelector('.testimonial-pause');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let paused = false;
+  function updateMotion() {
+    testimonialTrack.dataset.paused = String(paused);
+    controls.hidden = reducedMotion.matches;
+    pause.setAttribute('aria-pressed', String(paused));
+    pause.innerHTML = paused ? 'Resume movement <span aria-hidden="true">&#9654;</span>' : 'Pause movement <span aria-hidden="true">&#10074;&#10074;</span>';
+    // Keep a gentle, consistent speed as card sizes change.
+    const gap = parseFloat(getComputedStyle(belt).gap) || 22;
+    belt.style.setProperty('--marquee-duration', `${(group.scrollWidth + gap) / 30}s`);
   }
-  function go(page) {
-    const target = Math.max(0, Math.min(page, starts.length - 1));
-    testimonialTrack.scrollTo({ left: offset(starts[target]), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
-  }
-  function layout() {
-    const oldStart = starts[current] || 0;
-    perPage = Number(getComputedStyle(testimonialTrack).getPropertyValue('--visible-cards')) || 1;
-    starts = Array.from({ length: Math.ceil(cards.length / perPage) }, (_, index) => Math.min(index * perPage, Math.max(0, cards.length - perPage)));
-    dots.replaceChildren();
-    starts.forEach((start, page) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.setAttribute('aria-label', `Show testimonials ${start + 1} to ${Math.min(start + perPage, cards.length)}`);
-      dot.setAttribute('aria-controls', 'testimonials-track');
-      dot.addEventListener('click', () => go(page));
-      dots.append(dot);
-    });
-    const newPage = Math.min(Math.floor(oldStart / perPage), starts.length - 1);
-    testimonialTrack.scrollTo({ left: offset(starts[newPage]), behavior: 'instant' });
-    sync();
-  }
-  previous.addEventListener('click', () => go(current - 1));
-  next.addEventListener('click', () => go(current + 1));
-  testimonialTrack.addEventListener('keydown', event => {
-    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    go(event.key === 'Home' ? 0 : event.key === 'End' ? starts.length - 1 : current + (event.key === 'ArrowRight' ? 1 : -1));
-  });
-  testimonialTrack.addEventListener('scroll', () => {
-    if (scheduled) return;
-    scheduled = true;
-    requestAnimationFrame(() => { scheduled = false; sync(); });
-  }, { passive: true });
-  window.addEventListener('resize', layout);
-  controls.hidden = false;
-  layout();
+  pause.addEventListener('click', () => { paused = !paused; updateMotion(); });
+  reducedMotion.addEventListener('change', updateMotion);
+  window.addEventListener('resize', updateMotion);
+  updateMotion();
 }
 
 // Local clinic preview navigation. All records here are illustrative demo data.
@@ -150,7 +123,7 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
 
 // Reveal each quote only when that individual card enters the viewport.
 if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const cards = document.querySelectorAll('#testimonials .testimonial-card');
+  const cards = document.querySelectorAll('#testimonials .testimonials-grid:not(.testimonial-duplicates) .testimonial-card');
   const testimonialObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
