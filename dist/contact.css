@@ -16,11 +16,11 @@
 #request-demo .form-grid label{font-size:12px;color:#454545;line-height:1.6}
 #request-demo .form-grid label>span{color:var(--red)}
 #request-demo .form-grid label>.optional{color:var(--muted)}
-#request-demo .form-grid input,#request-demo .form-grid select,#request-demo .form-grid textarea{font-size:13px;line-height:1.5;min-height:48px;background:white;color:var(--ink);border:1px solid #d2d2d2;border-radius:4px;padding:12px;margin-top:8px;color-scheme:light}
+#request-demo .form-grid input,#request-demo .form-grid select,#request-demo .form-grid textarea{font-size:13px;line-height:1.5;min-height:48px;background:white;color:var(--ink);border:2px solid #d2d2d2;border-radius:4px;padding:11px;margin-top:8px;color-scheme:light}
 #request-demo .form-grid input::placeholder,#request-demo .form-grid textarea::placeholder{color:#777}
 #request-demo .form-grid select:has(option[value=""]:checked){color:#777}
-#request-demo .form-grid input:hover,#request-demo .form-grid select:hover,#request-demo .form-grid textarea:hover{border-color:#999}
-#request-demo .form-grid input:focus-visible,#request-demo .form-grid select:focus-visible,#request-demo .form-grid textarea:focus-visible{border-color:var(--red);outline:2px solid #c9232c33;outline-offset:2px}
+#request-demo .form-grid input:hover,#request-demo .form-grid select:hover,#request-demo .form-grid textarea:hover{border-color:#d2d2d2}
+#request-demo .form-grid input:focus,#request-demo .form-grid select:focus,#request-demo .form-grid textarea:focus{border-color:var(--red);outline:none;box-shadow:none}
 #request-demo .form-grid textarea{min-height:110px}
 #request-demo .button{width:100%;margin-top:26px;min-height:50px;padding:14px 20px;justify-content:space-between;background:var(--black);border-color:var(--black);color:white;font-size:13px;border-radius:4px}
 #request-demo .button .icon{color:white}
