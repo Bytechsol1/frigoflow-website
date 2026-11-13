@@ -1,0 +1,28 @@
+Contextual stock photography added to the marketing site
+
+These photographs illustrate healthcare settings. They do not depict Frigo Flow
+hardware, employees, customers, facilities or an endorsed laboratory partner.
+No AI-generated product substitutes were added. Original photo colors retained.
+
+dist/assets/clinic-consultation.jpg
+Placement: hero, beside the existing clinic-focused headline and CTAs.
+Photographer: Vitaly Gariev / Unsplash
+Source: https://unsplash.com/photos/IDM3n0LfNCY
+Image: https://images.unsplash.com/photo-1758691461935-202e2ef6b69f
+Downloaded at 1600 x 900 JPEG, quality 85.
+Source identified as a free Unsplash photograph in image search.
+
+dist/assets/laboratory-workflow.jpg
+Placement: How It Works introduction, above the existing four-step sequence.
+Photographer: Daniel Sone / National Cancer Institute, via Unsplash
+Source: https://unsplash.com/photos/laboratory-researcher-1fvqUP-xaYQ
+Image: https://images.unsplash.com/photo-1576091160651-e028ca26a943
+Downloaded at 1600 x 1067 JPEG, quality 85.
+Source page states free use under the Unsplash License.
+Photo shows laboratory sample preparation; it is not evidence that Frigo Flow
+offers the PCR procedure described on the source page.
+
+License: https://unsplash.com/license
+Both images were visually inspected before integration. Layout uses intrinsic
+dimensions and proportional sizing; no product or face is intentionally cropped.
+Product photography remains a separate missing client asset requirement.

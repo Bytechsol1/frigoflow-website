@@ -1,0 +1,100 @@
+FRIGO FLOW - PROJECT ASSET AUDIT
+Audit date: 2026-11-14
+Scope: entire current checkout, including hidden files; Git internal metadata
+excluded from deployable asset inventory. No additional visual changes made.
+
+FINDING
+Zero verified genuine product photographs are available. No real device or kit
+photograph has been integrated. Product presentation awaits client assets.
+
+PROJECT COVERAGE
+The website is buildless HTML/CSS/JavaScript in dist/. There are no public/,
+public/images/, src/, src/assets/, or images/ directories. All supplied media
+files are in dist/assets/. No separate product galleries, photographs, videos,
+screenshots, or other diagnostic-equipment images were found.
+
+AVAILABLE IMAGE AND BRAND INVENTORY
+
+1. dist/assets/frigo-kit-concept.png
+   Filename: frigo-kit-concept.png
+   Format/resolution: PNG, 1536 x 1024 pixels, 3:2 landscape.
+   Visually inspected: white cylindrical device with red top button and clear
+   lower vial; open white FRIGO FLOW box with a red-capped tube and two sealed
+   pouches. Light gray studio-style background, soft shadows, complete objects
+   visible; box occupies much of frame, device stands at right.
+   Provenance: product-image-prompt.txt explicitly records built-in image
+   generation and calls the hardware a concept, not an existing real device.
+   Genuine product photograph: NO. Branding in generated art does not establish
+   that it depicts the client's actual product or packaging.
+   Quality: visually crisp at native resolution, but 1536 px width limits large
+   high-density displays. No cropping or retouching can establish authenticity.
+   Background: aesthetically suitable for neutral layouts; not transparent.
+   Recommended placement: none on the production site. Retain only as an unused
+   concept reference. Do not use as hero, kit, packaging or device evidence.
+   Current website use: none; index.html does not reference this PNG.
+
+2. dist/assets/favicon.svg
+   Filename: favicon.svg
+   Format: vector SVG, viewBox 0 0 40 40; red stylized leaf path (#c73535).
+   Content verified from vector geometry: same leaf mark as the inline site logo.
+   Genuine product photograph: not applicable; existing brand graphic.
+   Quality/background: scalable vector, transparent background.
+   Recommended/current placement: browser favicon. No crop required.
+   Brand ownership or official approval is not independently documented here.
+
+3. dist/index.html - inline SVG symbols and wordmark
+   Existing location: symbol#leaf plus the .brand text in header/footer.
+   Content: red leaf mark with FRIGO FLOW text; line icons for navigation,
+   workflow, features, security and interface illustrations.
+   Format: inline vectors; no separate logo image files.
+   Recommended/current placement: retain existing header/footer and icon uses.
+   These are brand/interface graphics, not photographs of medical equipment.
+
+4. dist/index.html - interface illustrations
+   Existing locations: .orders-app, .brand-preview, .portal-window,
+   .patient-phone. HTML/CSS compositions, not screenshot image files.
+   Content: sample clinic test orders, NexGen Wellness dashboard and patient
+   portal. Existing labels identify illustrative data.
+   Recommended/current placement: retain clinic and white-label sections as
+   interface illustrations. Do not describe them as verified live screenshots
+   or actual diagnostic hardware.
+
+5. Supporting brand assets
+   dist/assets/inter-latin.woff2: local Inter web font, not an image.
+   dist/assets/Inter-OFL.txt: font license, not an image.
+   product-image-prompt.txt: provenance for generated concept, not an asset
+   approval or specification for the real device.
+
+MISSING CLIENT ASSETS / REQUIREMENTS
+Required: actual Frigo Flow blood collection device photograph. Supply at least
+2000 px width, preferably 3000 px, original full-resolution file, neutral white
+or transparent background, accurate branding, complete vial/device visible.
+Use front or three-quarter view; preserve all important parts with object-fit:
+contain. Intended placement: existing hero figure or approved device showcase.
+
+Required: actual open testing kit with every included component and correct
+packaging. Supply at least 2400 px width, preferably 3000 px, neutral background,
+consistent lighting with device photo, no text overlays, no cut-off components.
+Intended placement: existing hero product composition; dedicated section only
+if separately approved, since the current task preserves page structure.
+
+Optional: actual closed branded packaging and a combined device/kit photograph.
+Supply landscape 3:2 or 4:3 originals with generous edge space for responsive
+layouts. Provide product/model names, confirmation of actual kit contents,
+usage rights and client approval identifying the depicted Frigo Flow hardware.
+
+INTEGRATION STATUS AND HANDOFF
+The existing hero .product-placeholder is explicitly labeled as awaiting
+approved photography. Keep the current figure and caption. Once approved
+photos arrive, replace only that div with an img/picture using the real supplied
+path, accurate alt text and intrinsic dimensions. Retain aspect ratio, use
+object-fit:contain, and override the legacy .product-visual img blend mode with
+mix-blend-mode:normal to preserve product colors. Check full product visibility
+on mobile, tablet, desktop and high-density displays before claiming completion.
+Do not silently overwrite the generated concept with an authentic photo under
+the concept filename; use the supplied asset's clear, accurate name.
+
+CHANGES IN THIS AUDIT
+Added this inventory and corrected README image status. No forms, scripts,
+routes, integrations, section structure or website visuals changed in this audit.
+Existing visual refinements from the preceding task remain in place.

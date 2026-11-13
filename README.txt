@@ -3,15 +3,22 @@ FRIGO FLOW — VISUAL REFINEMENT
 Open dist/index.html directly in a browser, or serve the dist folder with any static web server.
 No framework, dependency installation, or build step is required.
 
+Optional npm preview: run npm run dev (or npm start).
+This uses the installed Python 3 static server with no npm dependencies.
+The preview serves dist at http://127.0.0.1:8080. No build step is needed.
+
 Original page structure preserved: navigation, hero, four-step workflow, clinic benefits,
 white-label experience, six capabilities, data-protection strip, FAQ/demo, footer.
 
 Design: white / near-black / neutral gray, restrained #C73535 accents, clean sans-serif
 typography, increased whitespace, responsive layouts, keyboard-accessible navigation.
 
-The generated blood collection device and kit are concept imagery, not actual product
-photographs. The dashboard previews use illustrative data. Replace the asset at
-dist/assets/frigo-kit-concept.png with approved product photography when available.
+No genuine product photographs are supplied. The generated device and kit at
+dist/assets/frigo-kit-concept.png are unused concept art, not actual product photos.
+The public hero displays contextual clinic photography, not a product photo. See ASSET-AUDIT.txt
+for the complete inventory and PRODUCT-ASSETS.txt for required client photographs.
+See IMAGE-CREDITS.txt for contextual stock photo sources. Retain the
+concept file only as a reference. The dashboard previews use illustrative data.
 
 The FAQ and mobile navigation work. The demo form validates inputs locally, but does not
 send or store them. Clinic/patient login and legal destinations are not supplied, so those

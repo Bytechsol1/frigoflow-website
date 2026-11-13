@@ -8,6 +8,9 @@
   <title>Frigo Flow — One Connected Workflow</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="refinement.css">
+  <link rel="stylesheet" href="testimonials.css">
+  <link rel="stylesheet" href="clinics.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -45,22 +48,28 @@
   <main id="main">
     <section class="hero container" aria-labelledby="hero-heading">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="red-dot"></span> DIAGNOSTIC WORKFLOW PLATFORM FOR CLINICS</p>
-        <h1 id="hero-heading">From patient enrollment to lab results.<br><span>One connected workflow.</span></h1>
+        <p class="eyebrow"><span class="red-dot"></span> DIAGNOSTIC INFRASTRUCTURE FOR MODERN CLINICS</p>
+        <h1 id="hero-heading">Better diagnostics.<br><span>Built for modern healthcare.</span></h1>
         <p class="intro">Simplify diagnostic testing with centralized ordering, collection tracking, and secure results access, all within your clinic’s own branded experience.</p>
-        <div class="hero-actions"><a class="button" href="#request-demo">Request a Demo <svg class="icon"><use href="#arrow"/></svg></a><a class="text-link" href="#how-it-works"><span class="play-circle"><svg class="icon"><use href="#play"/></svg></span>Explore the Workflow</a></div>
+        <div class="hero-actions"><a class="button" href="#capabilities">Explore Our Platform <svg class="icon"><use href="#arrow"/></svg></a><a class="text-link" href="#request-demo">Partner With Frigo Flow <svg class="icon"><use href="#arrow"/></svg></a></div>
         <ul class="trust-list"><li><svg class="icon"><use href="#shield"/></svg>Clinic-Branded Experience</li><li><svg class="icon"><use href="#lock"/></svg>Secure &amp; Compliant</li><li><svg class="icon"><use href="#bolt"/></svg>Streamlined Workflow</li></ul>
       </div>
       <figure class="product-visual">
         <div class="product-topline"><span class="product-kicker">CARE, CONNECTED.</span><span class="visual-index">01 / FRIGO FLOW</span></div>
-        <img src="assets/frigo-kit-concept.png" alt="Concept visualization of a white Frigo Flow blood collection device and an open kit with a sample tube and sealed pouches" width="1536" height="1024" fetchpriority="high">
-        <figcaption><span>Blood collection device &amp; kit</span><span class="concept-label">Product concept</span></figcaption>
+        <img class="care-photo" src="assets/clinic-consultation.jpg" alt="A physician discussing care with a patient across a desk in a clinic" width="1600" height="900" fetchpriority="high" decoding="async">
+        <figcaption><span>Supporting the clinic-patient connection.</span><span class="visual-index">ILLUSTRATIVE PHOTOGRAPHY</span></figcaption>
       </figure>
     </section>
 
     <section class="workflow section-pad" id="how-it-works" aria-labelledby="workflow-heading">
       <div class="container">
+        <div class="workflow-intro">
         <div class="section-heading centered"><p class="eyebrow">HOW IT WORKS</p><h2 id="workflow-heading">A simple, end-to-end<br class="desktop-break"> testing workflow.</h2></div>
+          <figure class="workflow-photo">
+            <img src="assets/laboratory-workflow.jpg" alt="A laboratory researcher handling sample tubes with protective gloves" width="1600" height="1067" loading="lazy" decoding="async">
+            <figcaption>Laboratory sample handling <span>Illustrative photography</span></figcaption>
+          </figure>
+        </div>
         <ol class="workflow-grid">
           <li><div class="step-top"><span class="step-number">01</span><svg class="icon step-icon"><use href="#users"/></svg></div><h3>Enroll patient</h3><p>Create a patient and select an available testing package.</p><svg class="icon step-arrow"><use href="#arrow"/></svg></li>
           <li><div class="step-top"><span class="step-number">02</span><svg class="icon step-icon"><use href="#flask"/></svg></div><h3>Initiate testing</h3><p>Coordinate the diagnostic request through our partner network.</p><svg class="icon step-arrow"><use href="#arrow"/></svg></li>
@@ -72,14 +81,16 @@
 
     <section class="clinic-section section-pad" id="for-clinics" aria-labelledby="clinic-heading">
       <div class="container clinic-grid">
-        <div class="clinic-copy"><p class="eyebrow">FOR CLINICS</p><h2 id="clinic-heading">Spend less time<br>chasing tests.<br><span>More time supporting patients.</span></h2><ul class="benefits"><li><svg class="icon"><use href="#check"/></svg><div><h3>Centralized visibility</h3><p>Manage patient testing workflows in one place.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Fewer manual follow-ups</h3><p>See available status updates and identify patients who need attention.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Clinic-branded experience</h3><p>A familiar, branded portal for your staff and patients.</p></div></li></ul></div>
+        <div class="clinic-copy"><p class="eyebrow">FOR CLINICS</p><h2 id="clinic-heading">Spend less time<br>chasing tests.<br><span>More time supporting patients.</span></h2></div>
         <div class="dashboard-stage">
-          <div class="orders-app" role="img" aria-label="Illustrative clinic dashboard showing test orders, collection progress and results, using sample patient data">
-            <aside class="app-sidebar"><svg class="brand-mark"><use href="#leaf"/></svg><span><svg class="icon"><use href="#grid"/></svg></span><span><svg class="icon"><use href="#users"/></svg></span><span class="active"><svg class="icon"><use href="#flask"/></svg></span><span><svg class="icon"><use href="#file"/></svg></span><span class="sidebar-bottom"><svg class="icon"><use href="#lock"/></svg></span></aside>
-            <div class="app-body"><div class="app-topbar"><span>Workspace <span class="slash">/</span> NexGen Wellness</span><span class="avatar">EC</span></div><div class="app-title"><div><span class="app-eyebrow">YOUR CLINIC, AT A GLANCE</span><h3>Test orders</h3></div><svg class="icon"><use href="#search"/></svg></div><div class="app-tabs"><span class="selected">All orders <b>37</b></span><span>In progress</span><span>Completed</span></div><div class="table-scroll"><table><thead><tr><th>Patient</th><th>Test panel</th><th>Status</th></tr></thead><tbody><tr><td><strong>Jennifer Hall</strong><small>Patient #00124</small></td><td>Cardiometabolic</td><td><span class="status"><i></i>In progress</span></td></tr><tr><td><strong>Daniel Price</strong><small>Patient #00123</small></td><td>Hormone panel</td><td><span class="status"><i></i>Kit shipped</span></td></tr><tr><td><strong>Lisa Gomez</strong><small>Patient #00122</small></td><td>Wellness panel</td><td><span class="status status-ready"><i></i>Results available</span></td></tr></tbody></table></div><div class="app-bottom"><span>Showing 3 of 37 orders</span><span>← &nbsp; →</span></div></div>
+          <div class="clinic-preview-label"><span><span class="red-dot" aria-hidden="true"></span> CLINIC WORKSPACE</span><span>Illustrative platform preview</span></div>
+          <div class="orders-app" role="region" aria-label="Interactive clinic dashboard demo using illustrative data">
+            <aside class="app-sidebar" aria-label="Demo workspace navigation"><svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg><button type="button" class="clinic-view-button" data-clinic-view="overview" aria-label="Overview" title="Overview" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#grid"/></svg></button><button type="button" class="clinic-view-button" data-clinic-view="patients" aria-label="Patients" title="Patients" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#users"/></svg></button><button type="button" class="clinic-view-button active" data-clinic-view="orders" aria-label="Test orders" title="Test orders" aria-controls="clinic-view-content" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#flask"/></svg></button><button type="button" class="clinic-view-button" data-clinic-view="results" aria-label="Results" title="Results" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#file"/></svg></button><button type="button" class="clinic-view-button sidebar-bottom" data-clinic-view="access" aria-label="Access information" title="Access information" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#lock"/></svg></button></aside>
+            <div class="app-body" id="clinic-view-content"><div class="app-topbar"><span>Workspace <span class="slash">/</span> NexGen Wellness</span><span class="avatar">EC</span></div><div class="app-title"><div><span class="app-eyebrow">YOUR CLINIC, AT A GLANCE</span><h3>Test orders</h3></div><svg class="icon"><use href="#search"/></svg></div><div class="app-tabs"><span class="selected">All orders <b>37</b></span><span>In progress</span><span>Completed</span></div><div class="table-scroll" tabindex="0" role="region" aria-label="Sample test orders; scroll horizontally to see all columns"><table><thead><tr><th>Patient</th><th>Test panel</th><th>Status</th></tr></thead><tbody><tr><td><strong>Jennifer Hall</strong><small>Patient #00124</small></td><td>Cardiometabolic</td><td><span class="status"><i></i>In progress</span></td></tr><tr><td><strong>Daniel Price</strong><small>Patient #00123</small></td><td>Hormone panel</td><td><span class="status"><i></i>Kit shipped</span></td></tr><tr><td><strong>Lisa Gomez</strong><small>Patient #00122</small></td><td>Wellness panel</td><td><span class="status status-ready"><i></i>Results available</span></td></tr></tbody></table></div><div class="app-bottom"><span>Showing 3 of 37 orders</span><span>← &nbsp; →</span></div></div>
           </div>
           <div class="dashboard-caption"><span><span class="red-dot"></span> A clearer view of every step.</span><span>Illustrative data</span></div>
         </div>
+        <div class="clinic-benefits"><p class="clinic-benefits-label">LESS ADMIN. MORE OVERSIGHT.</p><ul class="benefits"><li><svg class="icon"><use href="#check"/></svg><div><h3>Centralized visibility</h3><p>Manage patient testing workflows in one place.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Fewer manual follow-ups</h3><p>See available status updates and identify patients who need attention.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Clinic-branded experience</h3><p>A familiar, branded portal for your staff and patients.</p></div></li></ul><a class="clinic-demo-link" href="#request-demo">Explore it with your team <svg class="icon"><use href="#arrow"/></svg></a></div>
       </div>
     </section>
 
@@ -104,6 +115,73 @@
     </div></div></section>
 
     <section class="security-section" aria-labelledby="security-heading"><div class="container security-grid"><div class="security-heading"><svg class="icon"><use href="#shield"/></svg><h2 id="security-heading">Designed with patient<br>data protection in mind.</h2></div><div><svg class="icon"><use href="#lock"/></svg><h3>Role-based permissions</h3><p>Ensure the right access for each user.</p></div><div><svg class="icon"><use href="#layers"/></svg><h3>Secure data handling</h3><p>Built with industry-standard security practices.</p></div><div><svg class="icon"><use href="#file"/></svg><h3>Audit &amp; access records</h3><p>Maintain a record of key actions, including agreement acceptance and data access.</p></div></div></section>
+
+    <section class="testimonials-section section-pad" id="testimonials" aria-labelledby="testimonials-heading" aria-describedby="testimonials-disclaimer">
+      <div class="container">
+        <div class="testimonials-heading">
+          <p class="eyebrow">TRUSTED BY HEALTHCARE PROFESSIONALS</p>
+          <h2 id="testimonials-heading">Built Around Better Healthcare Experiences.</h2>
+          <p class="testimonials-intro">Discover how diagnostic technology and streamlined healthcare infrastructure can support modern clinics and healthcare providers.</p>
+        </div>
+        <p class="testimonials-disclaimer" id="testimonials-disclaimer"><span class="red-dot" aria-hidden="true"></span>Illustrative placeholder testimonials. These quotes and identities do not represent actual customers or endorsements.</p>
+        <div class="testimonials-grid">
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Clinic workflows</span><span class="testimonial-index" aria-hidden="true">01 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Having ordering and collection updates in one place helps our team stay focused on patients rather than chasing the next step.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">01</span><span class="testimonial-identity">Clinic Partner 01</span><span class="testimonial-role">Clinic owner</span><span class="testimonial-company">Independent clinic / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Patient follow-up</span><span class="testimonial-index" aria-hidden="true">02 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>A clear path from testing to physician-reviewed results makes follow-up conversations easier to prepare for and more useful for patients.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">02</span><span class="testimonial-identity">Clinic Partner 02</span><span class="testimonial-role">Healthcare provider</span><span class="testimonial-company">Primary care practice / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Clinical coordination</span><span class="testimonial-index" aria-hidden="true">03 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>We value diagnostic technology that fits into clinical care. Consistent visibility across testing workflows helps our teams coordinate with confidence.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">03</span><span class="testimonial-identity">Clinic Partner 03</span><span class="testimonial-role">Medical director</span><span class="testimonial-company">Multi-site clinic / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Laboratory collaboration</span><span class="testimonial-index" aria-hidden="true">04 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Clear diagnostic requests and collection status updates help the clinic and laboratory work from the same information.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">04</span><span class="testimonial-identity">Clinic Partner 04</span><span class="testimonial-role">Laboratory professional</span><span class="testimonial-company">Partner laboratory / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Clinic operations</span><span class="testimonial-index" aria-hidden="true">05 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Our priority is a repeatable process across locations. A shared view of orders helps staff spot gaps and coordinate follow-ups.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">05</span><span class="testimonial-identity">Clinic Partner 05</span><span class="testimonial-role">Healthcare operations manager</span><span class="testimonial-company">Healthcare group / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Diagnostic infrastructure</span><span class="testimonial-index" aria-hidden="true">06 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Connected infrastructure makes it easier to coordinate with clinics, track each stage of testing, and keep responsibilities clear.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">06</span><span class="testimonial-identity">Clinic Partner 06</span><span class="testimonial-role">Diagnostic service provider</span><span class="testimonial-company">Diagnostic services / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Your clinic brand</span><span class="testimonial-index" aria-hidden="true">07 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>A clinic-branded experience keeps the patient relationship with our practice, while giving our team a clearer way to manage testing.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">07</span><span class="testimonial-identity">Clinic Partner 07</span><span class="testimonial-role">Clinic owner</span><span class="testimonial-company">Specialty clinic / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Patient experience</span><span class="testimonial-index" aria-hidden="true">08 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Patients want to understand what happens next. Clear testing updates give our team a better starting point for those conversations.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">08</span><span class="testimonial-identity">Clinic Partner 08</span><span class="testimonial-role">Healthcare provider</span><span class="testimonial-company">Community practice / placeholder</span></figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <div class="testimonial-top"><span class="testimonial-topic">Results access</span><span class="testimonial-index" aria-hidden="true">09 / 09</span></div>
+            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote><p>Secure access to reports supports our review process. It helps us keep diagnostic information organized while clinical decisions remain with the treating physician.</p></blockquote>
+            <figcaption><span class="testimonial-avatar" aria-hidden="true">09</span><span class="testimonial-identity">Clinic Partner 09</span><span class="testimonial-role">Medical director</span><span class="testimonial-company">Clinical network / placeholder</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section class="contact-section section-pad" aria-label="Frequently asked questions and demo request"><div class="container contact-grid">
       <div class="faq" id="faq"><p class="eyebrow">A LITTLE MORE CLARITY</p><h2>Frequently asked<br>questions.</h2><div class="faq-list">

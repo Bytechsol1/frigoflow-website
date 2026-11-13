@@ -1,0 +1,20 @@
+Approved Frigo Flow photography required
+
+No genuine product photographs were supplied in this checkout. The existing
+dist/assets/frigo-kit-concept.png is AI-generated concept art, as documented in
+the original README and product-image-prompt.txt. It is retained as an unused
+reference and is no longer displayed on the website.
+
+Required assets:
+1. Actual blood collection device, three-quarter view on white or transparent
+   background. Minimum 2000 px wide, accurate branding, no baked-in text.
+2. Actual testing kit, open with all included components visible. Minimum
+   2400 px wide, neutral background, consistent lighting and color treatment.
+3. Optional device and kit composition, landscape 4:3, with generous crop space
+   for mobile and desktop. Supply usage approval and accurate product names.
+
+The existing hero figure uses a public text-led platform overview. Replace
+the platform-overview div with the approved image when available, retaining
+the surrounding figure, caption, and responsive sizing. Do not use stock devices
+or generated substitute hardware. Confirm any physician-review claims with the
+product owner before changing existing clinical copy.
