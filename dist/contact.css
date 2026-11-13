@@ -1,0 +1,33 @@
+/* One aligned contact panel, with a deliberate transition into the footer. */
+.contact-section{padding-bottom:72px}
+.contact-section .contact-grid{gap:88px}
+.contact-section #request-demo{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:0;padding:0;background:var(--black);border:1px solid var(--line);border-radius:10px;overflow:hidden;align-items:stretch;scroll-margin-top:110px;color:white}
+#request-demo .demo-copy{padding:52px 44px;min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+#request-demo .demo-copy .eyebrow{display:flex;align-items:center;gap:10px;color:#ddd;font-size:10px;letter-spacing:.13em;margin:0 0 30px}
+#request-demo .demo-copy .eyebrow::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--red)}
+#request-demo h2{font-size:clamp(36px,3.5vw,52px);line-height:1.1;letter-spacing:-.05em;font-weight:480;max-width:15ch;color:white}
+#request-demo .demo-intro{font-size:15px;line-height:1.85;color:#bdbdbd;max-width:32ch;margin:26px 0 0}
+.contact-platform-note{display:flex;align-items:flex-start;gap:13px;padding-top:26px;margin-top:auto;width:100%;border-top:1px solid #333}
+.contact-platform-note .red-dot{margin-top:8px;width:5px;height:5px}
+.contact-platform-note p{font-size:12px;line-height:1.9;color:#bdbdbd}
+#demo-form{min-width:0;padding:44px;background:#fafafa;color:var(--ink)}
+.contact-form-heading{font-size:20px;line-height:1.4;letter-spacing:-.025em;font-weight:500;color:var(--ink);margin-bottom:28px}
+#request-demo .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 18px;margin-top:0}
+#request-demo .form-grid label{font-size:12px;color:#454545;line-height:1.6}
+#request-demo .form-grid label>span{color:var(--red)}
+#request-demo .form-grid label>.optional{color:var(--muted)}
+#request-demo .form-grid input,#request-demo .form-grid select,#request-demo .form-grid textarea{font-size:13px;line-height:1.5;min-height:48px;background:white;color:var(--ink);border:1px solid #d2d2d2;border-radius:4px;padding:12px;margin-top:8px;color-scheme:light}
+#request-demo .form-grid input::placeholder,#request-demo .form-grid textarea::placeholder{color:#777}
+#request-demo .form-grid select:has(option[value=""]:checked){color:#777}
+#request-demo .form-grid input:hover,#request-demo .form-grid select:hover,#request-demo .form-grid textarea:hover{border-color:#999}
+#request-demo .form-grid input:focus-visible,#request-demo .form-grid select:focus-visible,#request-demo .form-grid textarea:focus-visible{border-color:var(--red);outline:2px solid #c9232c33;outline-offset:2px}
+#request-demo .form-grid textarea{min-height:110px}
+#request-demo .button{width:100%;margin-top:26px;min-height:50px;padding:14px 20px;justify-content:space-between;background:var(--black);border-color:var(--black);color:white;font-size:13px;border-radius:4px}
+#request-demo .button .icon{color:white}
+#request-demo .button:hover{background:#303030;border-color:#303030}
+#request-demo .form-note{font-size:11px;line-height:1.7;color:var(--muted);margin-top:14px}
+#request-demo .form-status{background:#eee;color:var(--ink);font-size:12px;line-height:1.75}
+.contact-section+.site-footer{border-top:1px solid #292929}
+@media(max-width:1100px){#request-demo .demo-copy{padding:42px 32px}#demo-form{padding:36px 30px}}
+@media(max-width:960px){.contact-section #request-demo{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}#request-demo .demo-copy{padding:36px 26px}#demo-form{padding:32px 26px}#request-demo h2{font-size:38px}.contact-platform-note{margin-top:42px}.contact-section{padding-bottom:56px}}
+@media(max-width:700px){.contact-section .contact-grid{gap:56px}.contact-section #request-demo{grid-template-columns:minmax(0,1fr);border-radius:8px}#request-demo .demo-copy{padding:34px 26px}#request-demo .demo-copy .eyebrow{margin-bottom:23px}#request-demo h2{font-size:38px}#request-demo .demo-intro{max-width:38ch;margin-top:22px}.contact-platform-note{margin-top:26px;padding-top:20px}.contact-platform-note p br{display:none}.contact-platform-note p{line-height:1.8;max-width:32ch}#demo-form{padding:30px 24px}.contact-form-heading{font-size:20px;margin-bottom:24px}#request-demo .form-grid{grid-template-columns:minmax(0,1fr);gap:18px}.contact-section{padding-bottom:40px}}
