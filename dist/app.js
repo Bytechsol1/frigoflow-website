@@ -1,5 +1,62 @@
 const menuToggle = document.querySelector('.menu-toggle');
 
+// Responsive testimonial pages with native swipe and no automatic rotation.
+const testimonialTrack = document.querySelector('#testimonials-track');
+if (testimonialTrack) {
+  const cards = [...testimonialTrack.querySelectorAll('.testimonial-card')];
+  const controls = document.querySelector('.testimonial-controls');
+  const previous = controls.querySelector('.testimonial-prev');
+  const next = controls.querySelector('.testimonial-next');
+  const dots = controls.querySelector('.testimonial-dots');
+  const position = controls.querySelector('.testimonial-position');
+  let perPage = 3, starts = [], current = 0, scheduled = false;
+  const offset = index => cards[index].offsetLeft - cards[0].offsetLeft;
+  function sync() {
+    const left = testimonialTrack.scrollLeft;
+    current = starts.reduce((best, start, page) => Math.abs(offset(start) - left) < Math.abs(offset(starts[best]) - left) ? page : best, 0);
+    previous.disabled = current === 0;
+    next.disabled = current === starts.length - 1;
+    [...dots.children].forEach((dot, index) => dot.setAttribute('aria-current', String(index === current)));
+    position.textContent = `${starts[current] + 1}\u2013${Math.min(starts[current] + perPage, cards.length)} / ${cards.length} testimonials`;
+  }
+  function go(page) {
+    const target = Math.max(0, Math.min(page, starts.length - 1));
+    testimonialTrack.scrollTo({ left: offset(starts[target]), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  }
+  function layout() {
+    const oldStart = starts[current] || 0;
+    perPage = Number(getComputedStyle(testimonialTrack).getPropertyValue('--visible-cards')) || 1;
+    starts = Array.from({ length: Math.ceil(cards.length / perPage) }, (_, index) => Math.min(index * perPage, Math.max(0, cards.length - perPage)));
+    dots.replaceChildren();
+    starts.forEach((start, page) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Show testimonials ${start + 1} to ${Math.min(start + perPage, cards.length)}`);
+      dot.setAttribute('aria-controls', 'testimonials-track');
+      dot.addEventListener('click', () => go(page));
+      dots.append(dot);
+    });
+    const newPage = Math.min(Math.floor(oldStart / perPage), starts.length - 1);
+    testimonialTrack.scrollTo({ left: offset(starts[newPage]), behavior: 'instant' });
+    sync();
+  }
+  previous.addEventListener('click', () => go(current - 1));
+  next.addEventListener('click', () => go(current + 1));
+  testimonialTrack.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    go(event.key === 'Home' ? 0 : event.key === 'End' ? starts.length - 1 : current + (event.key === 'ArrowRight' ? 1 : -1));
+  });
+  testimonialTrack.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => { scheduled = false; sync(); });
+  }, { passive: true });
+  window.addEventListener('resize', layout);
+  controls.hidden = false;
+  layout();
+}
+
 // Local clinic preview navigation. All records here are illustrative demo data.
 const clinicContent = document.querySelector('#clinic-view-content');
 if (clinicContent) {
