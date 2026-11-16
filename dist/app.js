@@ -101,3 +101,10 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
   }, { rootMargin: '0px 0px -32px 0px' });
   document.querySelectorAll('.workflow .section-heading, .clinic-copy, .dashboard-stage, .branding-copy, .brand-preview, .capabilities-section .section-heading, .faq, .demo-panel').forEach(section => sectionObserver.observe(section));
 }
+
+// Keep one FAQ answer open, including browsers without grouped-details support.
+const faqItems = document.querySelectorAll('#faq .faq-list details');
+faqItems.forEach(item => item.addEventListener('toggle', () => {
+  if (!item.open) return;
+  faqItems.forEach(other => { if (other !== item) other.open = false; });
+}));

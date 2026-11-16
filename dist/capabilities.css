@@ -1,0 +1,44 @@
+/* Reference-inspired photo strip, scoped to platform capabilities. */
+#capabilities{background:#222224;color:#fff;overflow:hidden}
+#capabilities .capabilities-intro{margin-bottom:34px;max-width:650px}
+#capabilities .capabilities-intro .eyebrow{color:#d7d7da;font-size:10px;letter-spacing:.13em;margin-bottom:14px}
+#capabilities .capabilities-intro h2{color:#fff;font-size:clamp(29px,3.1vw,44px);line-height:1.12;letter-spacing:-.045em;font-weight:500;margin:0}
+#capabilities .capability-track{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:5px;scroll-padding-inline:0}
+#capabilities .capability-track::-webkit-scrollbar{display:none}
+#capabilities .capability-track:focus-visible{outline:2px solid #e15762;outline-offset:6px}
+#capabilities .capability-card{flex:0 0 calc((100% - 56px)/4.25);min-width:0;scroll-snap-align:start;background:#303032;border-radius:5px;overflow:hidden;display:flex;flex-direction:column}
+#capabilities .capability-card-image{aspect-ratio:1.08;overflow:hidden;background:#414143}
+#capabilities .capability-card-image img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.65);transition:transform .6s ease,filter .6s ease}
+#capabilities .capability-card:hover img{transform:scale(1.035);filter:saturate(1)}
+#capabilities .capability-card-copy{padding:19px 18px 24px;flex:1;border-top:1px solid #48484a}
+#capabilities .capability-card-number{display:block;font-size:9px;letter-spacing:.12em;color:#e9858e;margin-bottom:15px;font-variant-numeric:tabular-nums}
+#capabilities .capability-card h3{color:white;font-size:19px;font-weight:500;line-height:1.2;letter-spacing:-.035em;margin:0 0 12px}
+#capabilities .capability-card p{color:#c4c4c8;font-size:13px;line-height:1.65;margin:0}
+#capabilities .capability-controls{display:flex;align-items:center;justify-content:space-between;margin-top:25px;padding-top:18px;border-top:1px solid #454547}
+#capabilities .capability-controls[hidden]{display:none}
+#capabilities .capability-position{font-size:11px;letter-spacing:.12em;color:#bababe;font-variant-numeric:tabular-nums}
+#capabilities .capability-controls>div{display:flex;gap:9px}
+#capabilities .capability-controls button{width:44px;height:44px;display:grid;place-items:center;background:transparent;border:1px solid #646467;border-radius:50%;color:#fff;cursor:pointer;transition:background .2s,border-color .2s}
+#capabilities .capability-controls button:hover{background:#bd2939;border-color:#bd2939}
+#capabilities .capability-controls button:disabled{opacity:.3;cursor:default;background:transparent;border-color:#646467}
+#capabilities .capability-controls button:focus-visible{outline:2px solid #ee7d88;outline-offset:4px}
+#capabilities [data-capability-prev] svg{transform:rotate(180deg)}
+@media(max-width:1000px){#capabilities .capability-card{flex-basis:calc((100% - 34px)/2.7)}}
+@media(max-width:650px){#capabilities .capability-card{flex-basis:81%}#capabilities .capability-track{gap:12px}#capabilities .capabilities-intro{margin-bottom:26px}#capabilities .capability-card-image{aspect-ratio:1.15}#capabilities .capability-card h3{font-size:21px}}
+@media(prefers-reduced-motion:reduce){#capabilities .capability-card-image img{transition:none}#capabilities .capability-card:hover img{transform:none}}
+
+/* Edge navigation replaces the bottom control bar. */
+#capabilities .capability-carousel{position:relative}
+#capabilities .capability-controls{position:absolute;inset:0;pointer-events:none;margin:0;padding:0;border:0;display:block}
+#capabilities .capability-position{display:none}
+#capabilities .capability-controls>div{display:block}
+#capabilities .capability-controls button{position:absolute;top:44%;right:12px;transform:translateY(-50%);pointer-events:auto;width:44px;height:44px;background:#fff;color:#555;border:1px solid #ececec;box-shadow:0 3px 15px #0002;z-index:2}
+#capabilities .capability-controls button:hover{background:#f2f2f2;color:#111;border-color:#fff}
+#capabilities .capability-controls [data-capability-prev]{left:12px;right:auto}
+#capabilities .capability-controls button:disabled{visibility:hidden}
+#capabilities .capability-controls button .icon{width:17px;height:17px}
+#capabilities [data-capability-next] svg{transform:rotate(-90deg)}
+#capabilities [data-capability-prev] svg{transform:rotate(90deg)}
+
+/* Keep both edge arrows visible, including at the start of the carousel. */
+#capabilities .capability-controls button:disabled{visibility:visible;opacity:.45}

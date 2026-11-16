@@ -104,3 +104,10 @@
 @media(prefers-reduced-motion:reduce){.marker-belt{animation:none;will-change:auto}.marker-window{overflow-y:auto;mask-image:none;pointer-events:auto}.marker-duplicates{display:none}}
 
 #for-clinics .clinic-testing-photo img{object-position:35% center}
+
+/* Text-led benefit rows and a clear red partnership CTA. */
+#for-clinics .benefits li{display:block;padding:23px 0}
+#for-clinics .clinic-demo-link{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:50px;padding:14px 20px;margin-top:22px;background:var(--red);border:1px solid var(--red);border-radius:5px;color:#fff;font-size:13px;font-weight:550;line-height:1.4;transition:background .2s,border-color .2s}
+#for-clinics .clinic-demo-link .icon{color:#fff;width:18px;height:18px}
+#for-clinics .clinic-demo-link:hover{background:#a51b24;border-color:#a51b24}
+#for-clinics .clinic-demo-link:focus-visible{outline:2px solid white;outline-offset:4px}

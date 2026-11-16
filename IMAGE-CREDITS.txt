@@ -52,3 +52,28 @@ Built-in imagegen; illustrative medical/cellular art, not actual product photogr
 Prompt: Premium white diagnostic medtech hero with sculptural red blood cells and
 pale white cells on the upper right; clear left/bottom space; no equipment, devices,
 people, text or logos. Source preserved in generated_images; copied into project.
+
+dist/assets/hero-diagnostic-station-concept.png
+Built-in imagegen edit derived from the user-provided hero reference screenshot.
+Prompt: Extract central black/silver/red diagnostic station illustration onto white;
+remove webpage content; retain full object, subtle shadows and reference appearance.
+Concept artwork only, not verified hardware or an actual application screenshot.
+Source generated file retained; project uses this copied asset.
+
+Capabilities section ? illustrative healthcare photography (not Frigo Flow product or staff photography):
+- dist/assets/capabilities-laboratory.jpg ? National Cancer Institute / Unsplash. https://unsplash.com/photos/a-woman-in-white-lab-coat-and-gloves-working-on-a-machine-AnO1h192QBE
+- dist/assets/capabilities-patient-care.jpg ? Nappy / Unsplash. https://unsplash.com/photos/a-doctor-showing-a-patient-something-on-the-tablet-i8dHi584lFs
+Both sourced under the Unsplash license; visually inspected before use.
+
+Hero replacement: dist/assets/hero-collection-kit-concept.png ? user-supplied Frigo Flow At-Home Collection Kit.png, copied without image alterations. Concept illustration; not verified product photography. Replaces hero-diagnostic-station-concept.png in hero only.
+
+Capabilities photo carousel update: nine cards, each with an individually inspected contextual image. Images do not depict verified Frigo Flow customers, employees, products or facilities.
+dist/assets/capability-ordering.jpg ? https://images.unsplash.com/photo-1576091160399-112ba8d25d1d (Unsplash contextual stock photography).
+dist/assets/capability-collection.jpg ? https://images.unsplash.com/photo-1615461066841-6116e61058f4 (Unsplash contextual stock photography).
+dist/assets/capability-results.jpg ? https://images.unsplash.com/photo-1576091160550-2173dba999ef (Unsplash contextual stock photography).
+dist/assets/capability-branding.jpg ? https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d (Unsplash contextual stock photography).
+dist/assets/capability-security.jpg ? https://images.unsplash.com/photo-1555949963-ff9fe0c870eb (Unsplash contextual stock photography).
+dist/assets/capability-enrollment.jpg ? https://images.unsplash.com/photo-1573497620053-ea5300f94f21 (Unsplash contextual stock photography).
+Remaining cards reuse capabilities-patient-care.jpg, capabilities-laboratory.jpg and clinic-digital-care.jpg; sources recorded above. Previous two-panel capability presentation replaced.
+
+Security visual: dist/assets/security-platform-illustration.png. Built-in imagegen edit of user supplied Frigo Flow Secure Platform Showcase.png. Illustrative concept only, not verified product or live portal photography. Prompt: isolate lower-left laptop, red shield, sample tube and plinth; remove surrounding text/cards, replace HIPAA text with Access & data protection; preserve reference composition on near-white background.
