@@ -46,3 +46,9 @@ Nappy / Unsplash: https://unsplash.com/photos/a-doctor-using-a-tablet-Q0qcTWEb7A
 Photo URL: https://images.unsplash.com/photo-1666886573452-9dc8ce8f5cc5
 Source lists free use under the Unsplash License. Visually inspected.
 Contextual photo of a healthcare professional using a tablet, not Frigo Flow staff.
+
+dist/assets/hero-medical-cells.png
+Built-in imagegen; illustrative medical/cellular art, not actual product photography.
+Prompt: Premium white diagnostic medtech hero with sculptural red blood cells and
+pale white cells on the upper right; clear left/bottom space; no equipment, devices,
+people, text or logos. Source preserved in generated_images; copied into project.
