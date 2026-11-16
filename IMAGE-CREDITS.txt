@@ -26,3 +26,23 @@ License: https://unsplash.com/license
 Both images were visually inspected before integration. Layout uses intrinsic
 dimensions and proportional sizing; no product or face is intentionally cropped.
 Product photography remains a separate missing client asset requirement.
+
+Local-only user-requested reference: dist/assets/rythm-device-reference.webp
+Source: https://rythmhealth.com/
+Asset: https://framerusercontent.com/images/QH1xXyU2XUiLKwva0p8bZOlsgQw.webp
+Shows Rythm-branded hardware, explicitly labeled as a reference, not Frigo Flow.
+Not cleared as actual Frigo Flow product photography. No biomarker claims added.
+
+Local edited derivative: dist/assets/collection-device-unbranded.png
+Built-in imagegen edit of the retained Rythm reference photo at user request.
+Prompt: Remove only the embossed Rythm lettering on the red cap; preserve
+framing, hand, arm, device, vial, clothing, background, lighting and colors.
+Source retained: dist/assets/rythm-device-reference.webp.
+This unbranded edit is not verified Frigo Flow product photography.
+
+dist/assets/clinic-digital-care.jpg
+Placement: For Clinics, replacing the duplicated hero photograph.
+Nappy / Unsplash: https://unsplash.com/photos/a-doctor-using-a-tablet-Q0qcTWEb7AI
+Photo URL: https://images.unsplash.com/photo-1666886573452-9dc8ce8f5cc5
+Source lists free use under the Unsplash License. Visually inspected.
+Contextual photo of a healthcare professional using a tablet, not Frigo Flow staff.

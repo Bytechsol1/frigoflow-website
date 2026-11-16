@@ -1,34 +1,15 @@
 const menuToggle = document.querySelector('.menu-toggle');
 
-// Continuous testimonial strip; cloned cards are visual duplicates only.
-const testimonialTrack = document.querySelector('#testimonials-track');
-if (testimonialTrack) {
-  const belt = testimonialTrack.querySelector('.testimonial-belt');
-  const group = belt.querySelector('.testimonials-grid');
-  const duplicate = group.cloneNode(true);
-  duplicate.classList.add('testimonial-duplicates');
-  duplicate.setAttribute('aria-hidden', 'true');
-  duplicate.setAttribute('inert', '');
-  duplicate.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
-  belt.append(duplicate);
-  const controls = document.querySelector('.testimonial-controls');
-  const pause = controls.querySelector('.testimonial-pause');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let paused = false;
-  function updateMotion() {
-    testimonialTrack.dataset.paused = String(paused);
-    controls.hidden = reducedMotion.matches;
-    pause.setAttribute('aria-pressed', String(paused));
-    pause.innerHTML = paused ? 'Resume movement <span aria-hidden="true">&#9654;</span>' : 'Pause movement <span aria-hidden="true">&#10074;&#10074;</span>';
-    // Keep a gentle, consistent speed as card sizes change.
-    const gap = parseFloat(getComputedStyle(belt).gap) || 22;
-    belt.style.setProperty('--marquee-duration', `${(group.scrollWidth + gap) / 30}s`);
-  }
-  pause.addEventListener('click', () => { paused = !paused; updateMotion(); });
-  reducedMotion.addEventListener('change', updateMotion);
-  window.addEventListener('resize', updateMotion);
-  updateMotion();
+// Visual duplicate enables a seamless sample-marker loop.
+const markerList = document.querySelector('.clinic-testing-photo .marker-list');
+if (markerList) {
+  const copy = markerList.cloneNode(true);
+  copy.classList.add('marker-duplicates');
+  copy.setAttribute('aria-hidden', 'true');
+  copy.setAttribute('inert', '');
+  markerList.parentElement.append(copy);
 }
+
 
 // Local clinic preview navigation. All records here are illustrative demo data.
 const clinicContent = document.querySelector('#clinic-view-content');
@@ -119,18 +100,4 @@ if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: re
     });
   }, { rootMargin: '0px 0px -32px 0px' });
   document.querySelectorAll('.workflow .section-heading, .clinic-copy, .dashboard-stage, .branding-copy, .brand-preview, .capabilities-section .section-heading, .faq, .demo-panel').forEach(section => sectionObserver.observe(section));
-}
-
-// Reveal each quote only when that individual card enters the viewport.
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const cards = document.querySelectorAll('#testimonials .testimonials-grid:not(.testimonial-duplicates) .testimonial-card');
-  const testimonialObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-entering');
-      entry.target.addEventListener('animationend', () => entry.target.classList.remove('is-entering'), { once: true });
-      testimonialObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.08 });
-  cards.forEach(card => testimonialObserver.observe(card));
 }

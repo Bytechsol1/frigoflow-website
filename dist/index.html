@@ -14,8 +14,10 @@
   <link rel="stylesheet" href="faq.css">
   <link rel="stylesheet" href="security.css">
   <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="workflow.css">
+  <link rel="stylesheet" href="phone-showcase.css">
   <script src="app.js" defer></script>
+  <script src="testimonials.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,7 +44,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand brand-image" href="#" aria-label="Frigo Flow home"><span class="brand-image-frame"><img src="assets/frigo-flow-logo.png" alt="Frigo Flow" width="2800" height="1020" decoding="async"></span></a>
+      <a class="brand" href="#" aria-label="Frigo Flow home"><svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg><span>FRIGO <span class="brand-light">FLOW</span></span></a>
       <nav class="desktop-nav" aria-label="Main navigation"><a href="#how-it-works">How It Works</a><a href="#for-clinics">For Clinics</a><a href="#capabilities">Capabilities</a><a href="#faq">FAQ</a></nav>
       <div class="header-actions"><details class="login-menu"><summary>Login <svg class="icon"><use href="#chevron"/></svg></summary><div class="login-options"><button data-dialog="clinic">Clinic Login <span>↗</span></button><button data-dialog="patient">Patient Login <span>↗</span></button></div></details><a class="button button-small" href="#request-demo">Request Demo <svg class="icon"><use href="#arrow"/></svg></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
     </div>
@@ -66,13 +68,14 @@
     </section>
 
     <section class="workflow section-pad" id="how-it-works" aria-labelledby="workflow-heading">
-      <div class="container">
+      <div class="container workflow-layout">
         <div class="workflow-intro">
         <div class="section-heading centered"><p class="eyebrow">HOW IT WORKS</p><h2 id="workflow-heading">A simple, end-to-end<br class="desktop-break"> testing workflow.</h2></div>
-          <figure class="workflow-photo">
-            <img src="assets/laboratory-workflow.jpg" alt="A laboratory researcher handling sample tubes with protective gloves" width="1600" height="1067" loading="lazy" decoding="async">
-            <figcaption>Laboratory sample handling <span>Illustrative photography</span></figcaption>
-          </figure>
+          <a class="workflow-explore" href="#capabilities">
+            <img src="assets/laboratory-workflow.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async">
+            <span><strong>Explore Our Platform</strong><small>Diagnostic workflow capabilities</small></span>
+            <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
         </div>
         <ol class="workflow-grid">
           <li><div class="step-top"><span class="step-number">01</span><svg class="icon step-icon"><use href="#users"/></svg></div><h3>Enroll patient</h3><p>Create a patient and select an available testing package.</p><svg class="icon step-arrow"><use href="#arrow"/></svg></li>
@@ -86,24 +89,49 @@
     <section class="clinic-section section-pad" id="for-clinics" aria-labelledby="clinic-heading">
       <div class="container clinic-grid">
         <div class="clinic-copy"><p class="eyebrow">FOR CLINICS</p><h2 id="clinic-heading">Spend less time<br>chasing tests.<br><span>More time supporting patients.</span></h2></div>
-        <div class="dashboard-stage">
-          <div class="clinic-preview-label"><span><span class="red-dot" aria-hidden="true"></span> CLINIC WORKSPACE</span><span>Illustrative platform preview</span></div>
-          <div class="orders-app" role="region" aria-label="Interactive clinic dashboard demo using illustrative data">
-            <aside class="app-sidebar" aria-label="Demo workspace navigation"><svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg><button type="button" class="clinic-view-button" data-clinic-view="overview" aria-label="Overview" title="Overview" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#grid"/></svg></button><button type="button" class="clinic-view-button" data-clinic-view="patients" aria-label="Patients" title="Patients" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#users"/></svg></button><button type="button" class="clinic-view-button active" data-clinic-view="orders" aria-label="Test orders" title="Test orders" aria-controls="clinic-view-content" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="#flask"/></svg></button><button type="button" class="clinic-view-button" data-clinic-view="results" aria-label="Results" title="Results" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#file"/></svg></button><button type="button" class="clinic-view-button sidebar-bottom" data-clinic-view="access" aria-label="Access information" title="Access information" aria-controls="clinic-view-content" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#lock"/></svg></button></aside>
-            <div class="app-body" id="clinic-view-content"><div class="app-topbar"><span>Workspace <span class="slash">/</span> NexGen Wellness</span><span class="avatar">EC</span></div><div class="app-title"><div><span class="app-eyebrow">YOUR CLINIC, AT A GLANCE</span><h3>Test orders</h3></div><svg class="icon"><use href="#search"/></svg></div><div class="app-tabs"><span class="selected">All orders <b>37</b></span><span>In progress</span><span>Completed</span></div><div class="table-scroll" tabindex="0" role="region" aria-label="Sample test orders; scroll horizontally to see all columns"><table><thead><tr><th>Patient</th><th>Test panel</th><th>Status</th></tr></thead><tbody><tr><td><strong>Jennifer Hall</strong><small>Patient #00124</small></td><td>Cardiometabolic</td><td><span class="status"><i></i>In progress</span></td></tr><tr><td><strong>Daniel Price</strong><small>Patient #00123</small></td><td>Hormone panel</td><td><span class="status"><i></i>Kit shipped</span></td></tr><tr><td><strong>Lisa Gomez</strong><small>Patient #00122</small></td><td>Wellness panel</td><td><span class="status status-ready"><i></i>Results available</span></td></tr></tbody></table></div><div class="app-bottom"><span>Showing 3 of 37 orders</span><span>← &nbsp; →</span></div></div>
-          </div>
-          <div class="dashboard-caption"><span><span class="red-dot"></span> A clearer view of every step.</span><span>Illustrative data</span></div>
-        </div>
+        <figure class="clinic-testing-photo">
+          <img src="assets/clinic-digital-care.jpg" alt="A healthcare professional using a tablet in a clinical setting" width="1600" height="1067" loading="lazy" decoding="async">
+        <div class="marker-overlay" aria-label="Illustrative sample markers, not actual patient results or confirmed test availability"><span class="marker-demo-label">Sample data</span><div class="marker-window"><div class="marker-belt"><ul class="marker-list"><li><span>Vitamin D</span><small>Optimal</small></li><li><span>Testosterone</span><small>Optimal</small></li><li><span>TSH</span><small class="marker-range">Out of range</small></li><li><span>Free T3</span><small>Optimal</small></li><li><span>Creatinine</span><small>Optimal</small></li><li><span>Estrogen</span><small>Optimal</small></li><li><span>Ferritin</span><small class="marker-range">Out of range</small></li><li><span>Progesterone</span><small>Optimal</small></li><li><span>ApoB</span><small>Optimal</small></li></ul></div></div></div>
+        </figure>
         <div class="clinic-benefits"><p class="clinic-benefits-label">LESS ADMIN. MORE OVERSIGHT.</p><ul class="benefits"><li><svg class="icon"><use href="#check"/></svg><div><h3>Centralized visibility</h3><p>Manage patient testing workflows in one place.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Fewer manual follow-ups</h3><p>See available status updates and identify patients who need attention.</p></div></li><li><svg class="icon"><use href="#check"/></svg><div><h3>Clinic-branded experience</h3><p>A familiar, branded portal for your staff and patients.</p></div></li></ul><a class="clinic-demo-link" href="#request-demo">Explore it with your team <svg class="icon"><use href="#arrow"/></svg></a></div>
-      </div>
+</div>
     </section>
 
     <section class="branding-section section-pad" aria-labelledby="branding-heading">
       <div class="container branding-grid">
-        <div class="brand-preview" role="img" aria-label="Illustrative NexGen Wellness clinic and patient portals, customized with the clinic’s name">
-          <div class="portal-window"><div class="portal-topbar"><span class="nexgen-logo">✳</span><b>NexGen Wellness</b><span class="portal-user">EC</span></div><div class="portal-layout"><div class="portal-sidebar"><span class="portal-selected"><svg class="icon"><use href="#grid"/></svg>Dashboard</span><span><svg class="icon"><use href="#users"/></svg>Patients</span><span><svg class="icon"><use href="#flask"/></svg>Test orders</span><span><svg class="icon"><use href="#file"/></svg>Results</span></div><div class="portal-content"><span class="app-eyebrow">YOUR CLINIC. YOUR WORKSPACE.</span><h3>Welcome, Dr. Carter.</h3><p>Everything you need, in one place.</p><div class="portal-stats"><div><svg class="icon"><use href="#users"/></svg><strong>124</strong><span>Active patients</span></div><div><svg class="icon"><use href="#flask"/></svg><strong>37</strong><span>Test orders</span></div><div><svg class="icon"><use href="#file"/></svg><strong>86</strong><span>Results available</span></div></div><div class="portal-activity"><span>Recent activity</span><div></div><div></div><div></div></div></div></div></div>
-          <div class="patient-phone"><div class="phone-speaker"></div><div class="phone-brand"><span class="nexgen-logo">✳</span>NexGen Wellness</div><p class="phone-welcome">Welcome, Sarah.</p><p class="phone-subtitle">Your health, connected.</p><div class="phone-tile"><svg class="icon"><use href="#flask"/></svg><div><b>My Tests</b><small>Track your test orders</small></div><span>›</span></div><div class="phone-tile"><svg class="icon"><use href="#file"/></svg><div><b>Results</b><small>View your lab results</small></div><span>›</span></div><div class="phone-tile"><svg class="icon"><use href="#bell"/></svg><div><b>Messages</b><small>Updates from your clinic</small></div><span>›</span></div><div class="phone-home"></div></div>
-          <span class="branding-caption">Clinic &amp; patient portal preview · Illustrative data</span>
+        <div class="brand-preview phone-showcase" role="img" aria-label="Illustrative Frigo Flow mobile screens showing patient enrollment, test tracking and results access. Sample content only, not a live application.">
+          <div class="showcase-phone phone-enrollment">
+            <div class="showcase-status"><span>9:41</span><span aria-hidden="true">&#9679; &#9646;</span></div>
+            <div class="showcase-brand"><svg aria-hidden="true"><use href="#leaf"/></svg>FRIGO FLOW</div>
+            <span class="showcase-kicker">YOUR CLINIC. CONNECTED.</span>
+            <h3>Patient<br>enrollment.</h3>
+            <p class="showcase-description">A clear start to the testing journey.</p>
+            <div class="showcase-profile"><span>01</span><div><strong>Sample patient</strong><small>Demo clinic / Patient 01</small></div></div>
+            <div class="showcase-field"><small>Testing package</small><strong>Wellness panel</strong></div>
+            <div class="showcase-field"><small>Enrollment status</small><strong>Patient created</strong></div>
+            <div class="showcase-info"><svg class="icon" aria-hidden="true"><use href="#users"/></svg><span>Clinic-managed enrollment</span></div>
+            <div class="showcase-bottom"><span>Patients</span><span>Orders</span><span>Results</span></div>
+          </div>
+          <div class="showcase-phone phone-tracking">
+            <div class="showcase-status"><span>9:41</span><span aria-hidden="true">&#9679; &#9646;</span></div>
+            <div class="showcase-brand"><svg aria-hidden="true"><use href="#leaf"/></svg>FRIGO FLOW</div>
+            <span class="showcase-kicker">YOUR TESTING WORKFLOW</span>
+            <h3>Every step.<br>Connected.</h3>
+            <div class="showcase-order"><span>Test order / Demo 001</span><strong>Wellness panel</strong><small>Sample patient / Patient 01</small></div>
+            <ol class="showcase-timeline"><li><span>01</span><div><strong>Patient enrolled</strong><small>Testing package selected</small></div></li><li><span>02</span><div><strong>Testing initiated</strong><small>Diagnostic request coordinated</small></div></li><li class="current"><span>03</span><div><strong>Track collection</strong><small>Follow available status updates</small></div></li><li><span>04</span><div><strong>Access results</strong><small>When made available by your clinic</small></div></li></ol>
+            <div class="showcase-bottom"><span>Patients</span><span class="selected">Orders</span><span>Results</span></div>
+          </div>
+          <div class="showcase-phone phone-results">
+            <div class="showcase-status"><span>9:41</span><span aria-hidden="true">&#9679; &#9646;</span></div>
+            <div class="showcase-brand"><svg aria-hidden="true"><use href="#leaf"/></svg>FRIGO FLOW</div>
+            <span class="showcase-kicker">SECURE RESULTS ACCESS</span>
+            <h3>Results.<br>With context.</h3>
+            <div class="showcase-report"><svg class="icon" aria-hidden="true"><use href="#file"/></svg><strong>Wellness panel</strong><span>Example report status</span><small>Available to clinic</small></div>
+            <div class="showcase-review"><strong>Your care team.</strong><p>Clinical interpretation stays with your healthcare provider.</p></div>
+            <div class="showcase-info"><svg class="icon" aria-hidden="true"><use href="#lock"/></svg><span>Access managed by your clinic</span></div>
+            <div class="showcase-bottom"><span>Patients</span><span>Orders</span><span class="selected">Results</span></div>
+          </div>
+          <span class="showcase-caption">Frigo Flow mobile experience <span>Illustrative screens / sample data</span></span>
         </div>
         <div class="branding-copy"><p class="eyebrow">WHITE-LABEL EXPERIENCE</p><h2 id="branding-heading">Your clinic.<br>Your brand.<br><span>One connected platform.</span></h2><p class="section-intro">Deliver a seamless testing experience for your team and patients with a custom-branded portal, powered by Frigo Flow’s secure infrastructure.</p><ul class="check-list"><li><svg class="icon"><use href="#check"/></svg>Clinic-specific branding (logo, colors, domain)</li><li><svg class="icon"><use href="#check"/></svg>Branded clinic and patient portals</li><li><svg class="icon"><use href="#check"/></svg>Consistent, professional patient experience</li></ul></div>
       </div>
@@ -122,75 +150,83 @@
 
     <section class="testimonials-section section-pad" id="testimonials" aria-labelledby="testimonials-heading" aria-describedby="testimonials-disclaimer">
       <div class="container">
-        <div class="testimonials-heading">
-          <p class="eyebrow">TRUSTED BY HEALTHCARE PROFESSIONALS</p>
-          <h2 id="testimonials-heading">Built Around Better Healthcare Experiences.</h2>
-          <p class="testimonials-intro">Discover how diagnostic technology and streamlined healthcare infrastructure can support modern clinics and healthcare providers.</p>
-        </div>
-        <p class="testimonials-disclaimer" id="testimonials-disclaimer"><span class="red-dot" aria-hidden="true"></span>Illustrative placeholder testimonials. These quotes and identities do not represent actual customers or endorsements.</p>
-        <div class="testimonial-marquee" id="testimonials-track" tabindex="0" role="region" aria-label="Automatically scrolling placeholder testimonials; hover or focus to pause">
-          <div class="testimonial-belt"><div class="testimonials-grid">
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Clinic workflows</span><span class="testimonial-index" aria-hidden="true">01 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Having ordering and collection updates in one place helps our team stay focused on patients rather than chasing the next step.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">01</span><span class="testimonial-identity">Clinic Partner 01</span><span class="testimonial-role">Clinic owner</span><span class="testimonial-company">Independent clinic / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Patient follow-up</span><span class="testimonial-index" aria-hidden="true">02 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>A clear path from testing to physician-reviewed results makes follow-up conversations easier to prepare for and more useful for patients.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">02</span><span class="testimonial-identity">Clinic Partner 02</span><span class="testimonial-role">Healthcare provider</span><span class="testimonial-company">Primary care practice / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Clinical coordination</span><span class="testimonial-index" aria-hidden="true">03 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>We value diagnostic technology that fits into clinical care. Consistent visibility across testing workflows helps our teams coordinate with confidence.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">03</span><span class="testimonial-identity">Clinic Partner 03</span><span class="testimonial-role">Medical director</span><span class="testimonial-company">Multi-site clinic / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Laboratory collaboration</span><span class="testimonial-index" aria-hidden="true">04 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Clear diagnostic requests and collection status updates help the clinic and laboratory work from the same information.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">04</span><span class="testimonial-identity">Clinic Partner 04</span><span class="testimonial-role">Laboratory professional</span><span class="testimonial-company">Partner laboratory / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Clinic operations</span><span class="testimonial-index" aria-hidden="true">05 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Our priority is a repeatable process across locations. A shared view of orders helps staff spot gaps and coordinate follow-ups.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">05</span><span class="testimonial-identity">Clinic Partner 05</span><span class="testimonial-role">Healthcare operations manager</span><span class="testimonial-company">Healthcare group / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Diagnostic infrastructure</span><span class="testimonial-index" aria-hidden="true">06 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Connected infrastructure makes it easier to coordinate with clinics, track each stage of testing, and keep responsibilities clear.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">06</span><span class="testimonial-identity">Clinic Partner 06</span><span class="testimonial-role">Diagnostic service provider</span><span class="testimonial-company">Diagnostic services / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Your clinic brand</span><span class="testimonial-index" aria-hidden="true">07 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>A clinic-branded experience keeps the patient relationship with our practice, while giving our team a clearer way to manage testing.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">07</span><span class="testimonial-identity">Clinic Partner 07</span><span class="testimonial-role">Clinic owner</span><span class="testimonial-company">Specialty clinic / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Patient experience</span><span class="testimonial-index" aria-hidden="true">08 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Patients want to understand what happens next. Clear testing updates give our team a better starting point for those conversations.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">08</span><span class="testimonial-identity">Clinic Partner 08</span><span class="testimonial-role">Healthcare provider</span><span class="testimonial-company">Community practice / placeholder</span></figcaption>
-          </figure>
-          <figure class="testimonial-card">
-            <div class="testimonial-top"><span class="testimonial-topic">Results access</span><span class="testimonial-index" aria-hidden="true">09 / 09</span></div>
-            <span class="testimonial-mark" aria-hidden="true">&ldquo;</span>
-            <blockquote><p>Secure access to reports supports our review process. It helps us keep diagnostic information organized while clinical decisions remain with the treating physician.</p></blockquote>
-            <figcaption><span class="testimonial-avatar" aria-hidden="true">09</span><span class="testimonial-identity">Clinic Partner 09</span><span class="testimonial-role">Medical director</span><span class="testimonial-company">Clinical network / placeholder</span></figcaption>
-          </figure>
-        </div>
-          </div></div>
-        <div class="testimonial-controls" hidden>
-          <p class="testimonial-motion-note">9 perspectives. One connected workflow.</p>
-          <button type="button" class="testimonial-pause" aria-controls="testimonials-track" aria-pressed="false">Pause movement <span aria-hidden="true">&#10074;&#10074;</span></button>
+        <div class="testimonials-heading"><p class="eyebrow">TRUSTED HEALTHCARE PARTNERS</p><h2 id="testimonials-heading">Experiences That Move Healthcare Forward.</h2><p class="testimonials-intro">Discover how modern diagnostic infrastructure can help clinics and healthcare providers deliver better testing experiences.</p></div>
+        <div class="testimonial-section-meta"><p id="testimonials-disclaimer">Fictional placeholder testimonials. Not actual customer endorsements.</p><span>PARTNER PERSPECTIVES / 09</span></div>
+        <div class="signature-slider" data-testimonial-slider role="region" aria-roledescription="carousel" aria-label="Healthcare partner placeholder testimonials">
+          <div class="signature-track" tabindex="0" aria-label="Testimonial slides. Use left and right arrow keys to navigate."></div>
+          <div class="signature-controls" hidden>
+            <p class="signature-count" aria-live="polite" aria-atomic="true"><strong>01</strong><span>/ 09</span></p>
+            <div class="signature-progress" role="group" aria-label="Choose testimonial"></div>
+            <div class="signature-arrows"><button type="button" data-slide-direction="-1" aria-label="Previous testimonial"><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button><button type="button" data-slide-direction="1" aria-label="Next testimonial"><svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button></div>
+          </div>
+          <noscript><blockquote>Having ordering and collection updates in one place helps our team stay focused on patients rather than chasing the next step.</blockquote><p>Clinic Partner 01 / Fictional placeholder. Enable JavaScript to browse all nine perspectives.</p></noscript>
         </div>
       </div>
+      <script type="application/json" id="testimonial-data">[
+  {
+    "topic": "Clinic workflows",
+    "quote": "Having ordering and collection updates in one place helps our team stay focused on patients rather than chasing the next step.",
+    "identity": "Clinic Partner 01",
+    "role": "Clinic owner",
+    "company": "Independent clinic"
+  },
+  {
+    "topic": "Patient follow-up",
+    "quote": "A clear path from testing to physician-reviewed results makes follow-up conversations easier to prepare for and more useful for patients.",
+    "identity": "Clinic Partner 02",
+    "role": "Healthcare provider",
+    "company": "Primary care practice"
+  },
+  {
+    "topic": "Clinical coordination",
+    "quote": "We value diagnostic technology that fits into clinical care. Consistent visibility across testing workflows helps our teams coordinate with confidence.",
+    "identity": "Clinic Partner 03",
+    "role": "Medical director",
+    "company": "Multi-site clinic"
+  },
+  {
+    "topic": "Laboratory collaboration",
+    "quote": "Clear diagnostic requests and collection status updates help the clinic and laboratory work from the same information.",
+    "identity": "Clinic Partner 04",
+    "role": "Laboratory professional",
+    "company": "Partner laboratory"
+  },
+  {
+    "topic": "Clinic operations",
+    "quote": "Our priority is a repeatable process across locations. A shared view of orders helps staff spot gaps and coordinate follow-ups.",
+    "identity": "Clinic Partner 05",
+    "role": "Healthcare operations manager",
+    "company": "Healthcare group"
+  },
+  {
+    "topic": "Diagnostic infrastructure",
+    "quote": "Connected infrastructure makes it easier to coordinate with clinics, track each stage of testing, and keep responsibilities clear.",
+    "identity": "Clinic Partner 06",
+    "role": "Diagnostic service provider",
+    "company": "Diagnostic services"
+  },
+  {
+    "topic": "Your clinic brand",
+    "quote": "A clinic-branded experience keeps the patient relationship with our practice, while giving our team a clearer way to manage testing.",
+    "identity": "Clinic Partner 07",
+    "role": "Clinic owner",
+    "company": "Specialty clinic"
+  },
+  {
+    "topic": "Patient experience",
+    "quote": "Patients want to understand what happens next. Clear testing updates give our team a better starting point for those conversations.",
+    "identity": "Clinic Partner 08",
+    "role": "Healthcare provider",
+    "company": "Community practice"
+  },
+  {
+    "topic": "Results access",
+    "quote": "Secure access to reports supports our review process. It helps us keep diagnostic information organized while clinical decisions remain with the treating physician.",
+    "identity": "Clinic Partner 09",
+    "role": "Medical director",
+    "company": "Clinical network"
+  }
+]</script>
     </section>
 
     <section class="contact-section section-pad" aria-label="Frequently asked questions and demo request"><div class="container contact-grid">
@@ -205,7 +241,7 @@
     </div></section>
   </main>
 
-  <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand brand-image" href="#" aria-label="Frigo Flow home"><span class="brand-image-frame"><img src="assets/frigo-flow-logo.png" alt="Frigo Flow" width="2800" height="1020" decoding="async"></span></a><p>A diagnostic workflow platform that connects clinics, patients, and diagnostic partners.</p></div><nav aria-label="Platform links"><h3>Platform</h3><a href="#how-it-works">How It Works</a><a href="#for-clinics">For Clinics</a><a href="#capabilities">Capabilities</a></nav><nav aria-label="Resource links"><h3>Resources</h3><a href="#faq">FAQ</a><a href="#request-demo">Contact</a></nav><nav aria-label="Legal links"><h3>Legal</h3><button data-dialog="privacy">Privacy Policy</button><button data-dialog="terms">Terms of Service</button></nav><div class="footer-logins"><button class="button button-outline" data-dialog="clinic"><svg class="icon"><use href="#lock"/></svg>Clinic Login <span>↗</span></button><button class="button button-outline" data-dialog="patient"><svg class="icon"><use href="#users"/></svg>Patient Login <span>↗</span></button></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Frigo Flow. All rights reserved.</span><span>One connected workflow.</span></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#" aria-label="Frigo Flow home"><svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg><span>FRIGO <span class="brand-light">FLOW</span></span></a><p>A diagnostic workflow platform that connects clinics, patients, and diagnostic partners.</p></div><nav aria-label="Platform links"><h3>Platform</h3><a href="#how-it-works">How It Works</a><a href="#for-clinics">For Clinics</a><a href="#capabilities">Capabilities</a></nav><nav aria-label="Resource links"><h3>Resources</h3><a href="#faq">FAQ</a><a href="#request-demo">Contact</a></nav><nav aria-label="Legal links"><h3>Legal</h3><button data-dialog="privacy">Privacy Policy</button><button data-dialog="terms">Terms of Service</button></nav><div class="footer-logins"><button class="button button-outline" data-dialog="clinic"><svg class="icon"><use href="#lock"/></svg>Clinic Login <span>↗</span></button><button class="button button-outline" data-dialog="patient"><svg class="icon"><use href="#users"/></svg>Patient Login <span>↗</span></button></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Frigo Flow. All rights reserved.</span><span>One connected workflow.</span></div></div></footer>
   <dialog id="info-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Close dialog">×</button><p class="eyebrow">FRIGO FLOW PREVIEW</p><h2 id="dialog-title"></h2><p id="dialog-message"></p><button class="button dialog-dismiss">Got it <svg class="icon"><use href="#arrow"/></svg></button></dialog>
 </body>
 </html>

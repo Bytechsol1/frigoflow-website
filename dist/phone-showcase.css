@@ -1,0 +1,47 @@
+/* Presentation-only three-phone illustration, not a functional patient portal. */
+.branding-section .phone-showcase{position:relative;display:block;padding:0;height:520px;background:#f4f4f2;border:1px solid #ededed;border-radius:6px;overflow:hidden;isolation:isolate}
+.showcase-phone{position:absolute;top:62px;width:34%;height:378px;border:4px solid #0b0b0b;border-radius:27px;background:#17191b;box-shadow:0 12px 30px #00000012;color:white;padding:13px 11px 35px;overflow:hidden;display:flex;flex-direction:column}
+.showcase-phone::after{content:"";position:absolute;bottom:7px;left:36%;width:28%;height:3px;background:#aaa;border-radius:3px}
+.phone-enrollment{left:4%;z-index:1}
+.phone-tracking{top:37px;left:32%;height:430px;width:36%;z-index:3;background:#101415;border-color:#050505}
+.phone-results{right:4%;z-index:2;background:#102b31}
+.showcase-status{display:flex;justify-content:space-between;font-size:6px;line-height:1;color:#ddd;margin-bottom:18px}
+.showcase-status>span:last-child{font-size:5px;letter-spacing:2px}
+.showcase-brand{display:flex;align-items:center;gap:5px;font-size:7px;letter-spacing:.03em;font-weight:600;margin-bottom:22px;white-space:nowrap}
+.showcase-brand svg{width:15px;height:15px;flex-shrink:0;fill:var(--red);color:var(--red)}
+.showcase-kicker{font-size:5px;letter-spacing:.08em;color:#a6b0b3;line-height:1.6}
+.showcase-phone h3{color:#fff;font-size:21px;line-height:1.12;font-weight:480;letter-spacing:-.045em;margin-top:8px;margin-bottom:11px}
+.showcase-phone p.showcase-description{font-size:7px;line-height:1.65;color:#b2b7b9;margin-bottom:16px}
+.showcase-profile{display:flex;gap:7px;align-items:center;padding:10px 0;border-top:1px solid #ffffff1c;border-bottom:1px solid #ffffff1c;margin-bottom:9px}
+.showcase-profile>span{display:grid;place-items:center;width:24px;height:24px;flex-shrink:0;border-radius:5px;background:#303437;color:#eee;font-size:8px}
+.showcase-profile strong,.showcase-profile small{display:block;font-size:7px;line-height:1.7;font-weight:500}
+.showcase-profile small{font-size:5px;color:#aab2b6}
+.showcase-field{padding:9px;background:#24282c;border:1px solid #ffffff0e;border-radius:5px;margin-top:7px}
+.showcase-field small,.showcase-field strong{display:block;font-size:6px;line-height:1.7;color:#bac1c5}
+.showcase-field strong{font-size:8px;color:#fff;font-weight:500}
+.showcase-info{display:flex;gap:5px;align-items:center;font-size:5px;line-height:1.5;color:#c4cccf;margin-top:13px}
+.showcase-info .icon{width:10px;height:10px;flex-shrink:0;color:#d3858b}
+.showcase-order{padding:11px 9px;background:#253035;border:1px solid #ffffff12;border-radius:5px;margin-top:2px}
+.showcase-order span,.showcase-order strong,.showcase-order small{display:block;font-size:6px;line-height:1.7;color:#b4c2c7}
+.showcase-order strong{color:white;font-size:11px;font-weight:500;margin:3px 0}
+.showcase-timeline{margin:13px 0 0;padding:0;list-style:none}
+.showcase-timeline li{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #ffffff10}
+.showcase-timeline li>span{display:grid;place-items:center;flex-shrink:0;width:17px;height:17px;font-size:6px;color:#b5c1c6;border:1px solid #4a555a;border-radius:50%}
+.showcase-timeline strong,.showcase-timeline small{display:block;font-size:7px;line-height:1.5;color:white;font-weight:500}
+.showcase-timeline small{font-size:5px;color:#adb9bf;font-weight:400;margin-top:3px}
+.showcase-timeline .current>span{background:#76282e;border-color:#b84b55;color:white}
+.showcase-report{display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:13px 10px;background:#1e3b42;border:1px solid #ffffff15;border-radius:5px;margin-top:3px}
+.showcase-report .icon{width:19px;height:19px;color:#cfdee3}
+.showcase-report strong{font-size:10px;font-weight:500;color:white}
+.showcase-report>span{font-size:6px;color:#b5c8d0}
+.showcase-report small{font-size:5px;border:1px solid #75939d;padding:3px 5px;color:#d1e1e6;border-radius:3px}
+.showcase-review{margin-top:15px;padding-top:12px;border-top:1px solid #ffffff25}
+.showcase-review strong{font-size:9px;font-weight:500;color:#fff}
+.showcase-review p{font-size:7px;line-height:1.7;color:#b8cbd1;margin-top:5px}
+.showcase-bottom{position:absolute;bottom:15px;left:8px;right:8px;display:flex;justify-content:space-around;gap:5px;padding-top:8px;border-top:1px solid #ffffff20;background:inherit;font-size:5px;color:#aab7bd}
+.showcase-bottom .selected{color:#fff}
+.showcase-caption{position:absolute;bottom:20px;left:22px;right:22px;display:flex;justify-content:space-between;gap:10px;font-size:9px;line-height:1.6;color:var(--muted)}
+.showcase-caption>span{font-size:8px}
+@media(max-width:1100px) and (min-width:701px){.branding-section .phone-showcase{height:460px}.showcase-phone{padding-inline:8px;height:345px;top:55px;border-width:3px;border-radius:22px}.phone-tracking{top:30px;height:395px}.showcase-phone h3{font-size:18px}.showcase-brand{font-size:6px;margin-bottom:17px}.showcase-status{margin-bottom:14px}.showcase-field{padding:7px}.showcase-caption{left:15px;right:15px;bottom:13px;font-size:7px}.showcase-caption>span{font-size:6px}.showcase-timeline li{padding-block:7px}.showcase-review p{font-size:6px}}
+@media(max-width:700px){.branding-section .phone-showcase{height:auto;aspect-ratio:1.08;width:100%;max-width:580px}.showcase-phone{top:11%;height:74%;border-width:3px;border-radius:23px;padding:10px 8px 30px}.phone-tracking{top:6%;height:85%}.showcase-phone h3{font-size:clamp(15px,4vw,22px)}.showcase-brand{font-size:clamp(5px,1.4vw,8px);margin-bottom:12px;gap:3px}.showcase-status{margin-bottom:12px}.showcase-kicker{font-size:5px}.showcase-order{padding:8px 6px}.showcase-order strong{font-size:9px}.showcase-timeline{margin-top:8px}.showcase-timeline li{padding-block:6px}.showcase-field{padding:6px;margin-top:5px}.showcase-phone p.showcase-description{font-size:6px;margin-bottom:10px}.showcase-profile{padding:7px 0;margin-bottom:4px}.showcase-report{padding:9px 6px;gap:5px}.showcase-report strong{font-size:9px}.showcase-review{margin-top:10px;padding-top:8px}.showcase-review p{font-size:6px}.showcase-info{margin-top:8px;font-size:5px}.showcase-caption{bottom:10px;left:12px;right:12px;font-size:7px;gap:5px}.showcase-caption>span{font-size:6px}}
+@media(max-width:380px){.branding-section .phone-showcase{aspect-ratio:.9}.showcase-phone{padding-inline:6px;border-radius:19px}.showcase-phone h3{font-size:16px}.showcase-brand svg{width:11px;height:11px}.showcase-timeline strong{font-size:6px}.showcase-timeline small{font-size:4.5px}.showcase-caption{flex-direction:column;gap:1px;bottom:8px}}

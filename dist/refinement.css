@@ -20,7 +20,8 @@ h2 span{color:#747474}
 .brand-mark{width:34px;height:34px}
 .desktop-nav{font-size:13px;gap:29px}
 .login-menu{font-size:13px}
-.hero{grid-template-columns:1.15fr 1fr;gap:64px;padding-block:96px 104px}
+.hero{position:relative;isolation:isolate;grid-template-columns:1.15fr 1fr;gap:64px;padding-block:44px 80px}
+
 .hero .eyebrow{font-size:10px;letter-spacing:.105em;color:#565656;margin-bottom:30px}
 .hero .intro{font-size:16px;line-height:1.8;max-width:475px;margin-top:30px;color:var(--muted)}
 .hero-actions{margin-top:32px;gap:26px}
@@ -67,6 +68,8 @@ td small,.status{font-size:8px}
 .brand-preview{border-radius:3px;background:var(--soft);height:480px;border:1px solid #ededed}
 .portal-window{border-radius:4px;box-shadow:0 12px 30px #0000000d}
 .patient-phone{box-shadow:0 16px 30px #00000015}
+.branding-copy{position:relative;isolation:isolate}
+.branding-copy::before{content:"";position:absolute;inset:-32px -24px;z-index:-1;pointer-events:none;background-image:linear-gradient(to right,#eeeeee 1px,transparent 1px),linear-gradient(to bottom,#eeeeee 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(to right,transparent,#000 14%,#000 86%,transparent);opacity:.7}
 .branding-copy h2{font-size:clamp(36px,3.7vw,53px)}
 .section-intro{font-size:16px;line-height:1.8;max-width:460px}
 .check-list{gap:16px;margin-top:30px}
@@ -113,6 +116,7 @@ td small,.status{font-size:8px}
 .footer-bottom{font-size:11px;color:#b5b5b5;border-color:#393939}
 dialog{border-radius:4px}
 .hero-copy,.clinic-copy,.branding-copy,.faq,.demo-panel{min-width:0}
+.hero-copy{position:relative;isolation:isolate}
 .eyebrow{color:var(--muted)}
 .workflow .step-icon,.trust-list .icon,.check-list .icon{color:var(--muted)}
 .benefits .icon{color:#b7b7b7}
@@ -143,8 +147,8 @@ dialog{border-radius:4px}
 @keyframes section-enter{from{opacity:.25;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}}
 @media(prefers-reduced-motion:reduce){.button:hover .icon,.hero-actions .text-link:hover>.icon{transform:none}}
 @media(max-width:1200px){.container{width:calc(100% - 72px)}.hero{gap:40px}h1{font-size:54px}.desktop-nav{gap:20px}.clinic-grid,.branding-grid,.contact-grid{gap:48px}.product-visual{min-height:0}.trust-list{gap:14px}.trust-list li{font-size:9px}}
-@media(max-width:960px){.container{width:calc(100% - 48px)}.section-pad{padding-block:80px}.hero{gap:30px;padding-block:60px}h1{font-size:46px}.hero .intro{font-size:15px}.hero .eyebrow{font-size:8px}.product-visual{min-height:0}.product-topline{padding-inline:22px;font-size:8px}.product-visual figcaption{padding-inline:22px;align-items:flex-start}.clinic-grid{grid-template-columns:1fr}.clinic-copy h2{font-size:40px}.clinic-copy .benefits{margin-top:0}.brand-preview{height:410px}.section-heading.centered>h2{width:65%}.workflow-grid li{padding-inline:22px}.workflow-grid h3{font-size:18px}.workflow-grid p{font-size:13px}.demo-panel{padding:30px}.demo-panel h2{font-size:36px}.form-grid{grid-template-columns:1fr}.capabilities-section{padding-top:0}.contact-section{padding-block:80px}}
-@media(max-width:700px){.container{width:calc(100% - 40px)}.section-pad{padding-block:68px}.header-inner{height:72px}.header-actions .button-small{font-size:11px;min-height:40px}.hero{grid-template-columns:1fr;gap:40px;padding-block:48px 56px}h1{font-size:clamp(38px,8.8vw,48px);line-height:1.045}.hero .eyebrow{font-size:9px;letter-spacing:.07em;line-height:1.7;max-width:34ch}.hero-copy h1{max-width:12ch}.hero .intro{font-size:15px;margin-top:26px}.hero-actions .text-link{font-size:12px}.trust-list{margin-top:30px;gap:13px}.trust-list li{font-size:9px}.product-visual{min-height:0}.product-topline{padding:24px 24px 0;font-size:8px}.product-visual figcaption{padding:0 24px 24px;flex-direction:row;align-items:center;font-size:9px}.visual-index{font-size:7px}.section-heading.centered{display:block}.section-heading.centered>.eyebrow{margin:0 0 22px}.section-heading.centered>h2{width:100%;font-size:35px}.section-heading{margin-bottom:42px}.workflow-grid{gap:34px 0}.workflow-grid li{padding-inline:20px}.step-top{margin-bottom:24px}.workflow-grid h3{font-size:18px}.workflow-grid p{font-size:13px}.clinic-copy h2,.branding-copy h2,.faq h2{font-size:39px}.clinic-copy .benefits{margin-top:32px}.benefits p{font-size:13px}.orders-app{min-height:0}.app-topbar{font-size:7px}.app-tabs,table{font-size:7px}th{font-size:7px}td{font-size:7px;padding-block:14px}td small,.status{font-size:6px}.app-bottom{font-size:6px}.dashboard-caption{font-size:9px}.brand-preview{height:390px}.section-intro{font-size:15px}.check-list li{font-size:13px}.capabilities-section{padding-top:0}.capabilities-grid h3{font-size:18px}.capabilities-grid p{font-size:13px}.capabilities-grid article{padding:28px 20px!important}.capabilities-grid article:nth-child(odd){padding-left:0!important}.security-grid p{font-size:12px}.security-grid h3{font-size:13px}.contact-grid{gap:48px}.faq-list summary{font-size:14px;padding-block:22px}.demo-panel{padding:32px 24px}.demo-panel h2{font-size:38px}.form-grid{grid-template-columns:1fr 1fr;gap:18px 12px}.form-grid label{font-size:11px}.form-grid input,.form-grid select,.form-grid textarea{font-size:12px}.footer-main nav a,.footer-main nav button,.footer-main nav h3{font-size:12px}.footer-bottom{font-size:9px}.footer-brand p{font-size:13px}.footer-logins .button{font-size:11px}}
+@media(max-width:960px){.container{width:calc(100% - 48px)}.section-pad{padding-block:80px}.hero{gap:30px;padding-block:32px 60px}h1{font-size:46px}.hero .intro{font-size:15px}.hero .eyebrow{font-size:8px}.product-visual{min-height:0}.product-topline{padding-inline:22px;font-size:8px}.product-visual figcaption{padding-inline:22px;align-items:flex-start}.clinic-grid{grid-template-columns:1fr}.clinic-copy h2{font-size:40px}.clinic-copy .benefits{margin-top:0}.brand-preview{height:410px}.section-heading.centered>h2{width:65%}.workflow-grid li{padding-inline:22px}.workflow-grid h3{font-size:18px}.workflow-grid p{font-size:13px}.demo-panel{padding:30px}.demo-panel h2{font-size:36px}.form-grid{grid-template-columns:1fr}.capabilities-section{padding-top:0}.contact-section{padding-block:80px}}
+@media(max-width:700px){.container{width:calc(100% - 40px)}.section-pad{padding-block:68px}.header-inner{height:72px}.header-actions .button-small{font-size:11px;min-height:40px}.hero{grid-template-columns:1fr;gap:32px;padding-block:28px 48px}h1{font-size:clamp(38px,8.8vw,48px);line-height:1.045}.hero .eyebrow{font-size:9px;letter-spacing:.07em;line-height:1.7;max-width:34ch}.hero-copy h1{max-width:12ch}.hero .intro{font-size:15px;margin-top:26px}.hero-actions .text-link{font-size:12px}.trust-list{margin-top:30px;gap:13px}.trust-list li{font-size:9px}.product-visual{min-height:0}.product-topline{padding:24px 24px 0;font-size:8px}.product-visual figcaption{padding:0 24px 24px;flex-direction:row;align-items:center;font-size:9px}.visual-index{font-size:7px}.section-heading.centered{display:block}.section-heading.centered>.eyebrow{margin:0 0 22px}.section-heading.centered>h2{width:100%;font-size:35px}.section-heading{margin-bottom:42px}.workflow-grid{gap:34px 0}.workflow-grid li{padding-inline:20px}.step-top{margin-bottom:24px}.workflow-grid h3{font-size:18px}.workflow-grid p{font-size:13px}.clinic-copy h2,.branding-copy h2,.faq h2{font-size:39px}.clinic-copy .benefits{margin-top:32px}.benefits p{font-size:13px}.orders-app{min-height:0}.app-topbar{font-size:7px}.app-tabs,table{font-size:7px}th{font-size:7px}td{font-size:7px;padding-block:14px}td small,.status{font-size:6px}.app-bottom{font-size:6px}.dashboard-caption{font-size:9px}.brand-preview{height:390px}.section-intro{font-size:15px}.check-list li{font-size:13px}.capabilities-section{padding-top:0}.capabilities-grid h3{font-size:18px}.capabilities-grid p{font-size:13px}.capabilities-grid article{padding:28px 20px!important}.capabilities-grid article:nth-child(odd){padding-left:0!important}.security-grid p{font-size:12px}.security-grid h3{font-size:13px}.contact-grid{gap:48px}.faq-list summary{font-size:14px;padding-block:22px}.demo-panel{padding:32px 24px}.demo-panel h2{font-size:38px}.form-grid{grid-template-columns:1fr 1fr;gap:18px 12px}.form-grid label{font-size:11px}.form-grid input,.form-grid select,.form-grid textarea{font-size:12px}.footer-main nav a,.footer-main nav button,.footer-main nav h3{font-size:12px}.footer-bottom{font-size:9px}.footer-brand p{font-size:13px}.footer-logins .button{font-size:11px}}
 @media(max-width:380px){.container{width:calc(100% - 32px)}.brand{font-size:17px}.header-actions .button-small{font-size:10px}h1{font-size:42px}.form-grid{grid-template-columns:1fr}.product-visual figcaption{flex-direction:column;align-items:flex-start}.hero-actions{gap:18px}.hero-actions .text-link{font-size:11px}}
 
 /* The editorial rows remain a single reading sequence at every breakpoint. */
@@ -159,7 +163,7 @@ dialog{border-radius:4px}
 }
 
 /* Contextual photography: original colors and complete image proportions. */
-.product-visual{min-height:0;align-self:center;background:var(--soft)}
+.product-visual{min-height:0;align-self:start;background:var(--soft)}
 .product-visual .care-photo{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;margin-block:28px;mix-blend-mode:normal}
 .product-visual figcaption{flex-wrap:wrap;gap:10px;line-height:1.6}
 .workflow-intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-bottom:60px}
@@ -172,3 +176,5 @@ dialog{border-radius:4px}
 .workflow-photo figcaption span{font-size:10px}
 @media(max-width:960px){.workflow-intro{gap:36px}.product-visual .care-photo{margin-block:24px}.product-visual figcaption{flex-direction:column;align-items:flex-start}}
 @media(max-width:700px){.workflow-intro{grid-template-columns:1fr;gap:30px;margin-bottom:36px}.workflow-intro .section-heading h2{max-width:17ch}.product-visual .care-photo{margin-block:22px}.product-visual{width:100%;min-height:0}.product-visual figcaption{font-size:11px}.workflow-photo figcaption{font-size:10px}}
+
+@media(max-width:700px){.branding-copy::before{inset:-20px -12px;background-size:26px 26px;opacity:.6}}
